@@ -1,0 +1,24 @@
+api_platform:
+    title: 'Route API '
+    description: 'API to deal with boulder routes'
+    version: '1.0.0'
+    mapping:
+        paths: ['%kernel.project_dir%/src/Entity']
+    formats:
+        json: ['application/json']
+        jsonapi:  ['application/vnd.api+json']    
+        jsonld: ['application/ld+json']
+        html: ['text/html']
+        multipart: ['multipart/form-data']
+    patch_formats:
+        json: ['application/merge-patch+json']
+    swagger:
+        versions: [3]
+        api_keys:
+            apiKey:
+                name: Authorization
+                type: header
+    allow_plain_identifiers: true
+    defaults:
+        route_prefix: /v2
+        pagination_items_per_page: 100

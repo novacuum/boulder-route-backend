@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profile{% endblock %}
+
+{% block body %}
+
+    <h1>Profile</h1>
+    
+    <p>Well hi there {{ user.getUserIdentifier() }}</p>
+    {% if not user.isVerified() %}
+    <p>We emailed you a link to verify your account.</p>
+    {% endif %}
+{% endblock %}
